@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Calculator</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h2>Triangle Calculator</h2>
+            <h:outputLabel value="Sides of Triangle" style="color:red"/>
+            <h:panelGrid columns="8">
+                <h:outputLabel value="AB: "/>
+                <h:inputText id="number1" size="4" style="text-align: right" value="#{triangle.number1}" converterMessage="Please enter digits only." />
+                <h:outputLabel value="BC: "/>
+                <h:inputText id="number2" size="4" style="text-align: right" value="#{triangle.number2}" converterMessage="Please enter digits only." />
+                <h:outputLabel value="CA: "/>
+                <h:inputText id="number3" size="4" style="text-align: right" value="#{triangle.number3}" converterMessage="Please enter digits only." />
+                &nbsp; &nbsp; &nbsp;
+                <h:commandButton value="Validate Triangle" action="#{triangle.add ()}" />
+            </h:panelGrid>
+            <h1><h:outputLabel value="#{triangle.result}" style="color:red" /><br/></h1>
+             <h:outputLabel value="Results" style="color:red" />
+            <h:panelGrid columns="6">
+                <h:outputLabel value="Angle A: "/>
+                <h:inputText id="AngleA" size="4" style="text-align: right" value="#{triangle.angle1}" converterMessage="Please enter digits only." />
+                <h:outputLabel value="Angle B: "/>
+                <h:inputText id="AngleB" size="4" style="text-align: right" value="#{triangle.angle2}" converterMessage="Please enter digits only." />
+                <h:outputLabel value="Angle C: "/>
+                <h:inputText id="AngleC" size="4" style="text-align: right" value="#{triangle.angle3}" converterMessage="Please enter digits only." />
+                <h:outputLabel value="Area: "/>
+                <h:inputText id="Area" size="4" style="text-align: right" value="#{triangle.area}" converterMessage="Please enter digits only." />
+                <h:outputLabel value="Perimeter: "/>
+                <h:inputText id="Perimeter" size="4" style="text-align: right" value="#{triangle.perimeter}" converterMessage="Please enter digits only." />
+
+            </h:panelGrid><br/>
+              
+        </h:form>
+    </h:body>
+</html>
+
